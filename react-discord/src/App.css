@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #2C2F33;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -56,11 +60,12 @@
 
 .online-badge {
   position: absolute;
-  top: 62px;
-  left: 105px;
-  height: 10px;
-  width: 10px;
+  top: 64px;
+  left: 112px;
+  height: 12px;
+  width: 12px;
   padding: 5px 5px;
+  border: 3px solid #23272A;
   border-radius: 50%;
   background: rgb(19, 211, 19);
   color: white;
@@ -68,11 +73,12 @@
 
 .offline-badge {
   position: absolute;
-  top: 62px;
-  left: 105px;
-  height: 10px;
-  width: 10px;
+  top: 64px;
+  left: 112px;
+  height: 12px;
+  width: 12px;
   padding: 5px 5px;
+  border: 3px solid #23272A;
   border-radius: 50%;
   background: red;
   color: white;
@@ -84,7 +90,7 @@
 
 .main {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .body-message {
@@ -113,17 +119,64 @@
   align-items: center;
 }
 
-.header-message h4{
+.header-message h4 {
   padding-right: 1em;
 }
 
-.header-message p{
+.header-message p {
   font-size: 12px;
 }
 
 .bottom-message {
   text-align: left;
 }
-.bottom-message p{
+
+.bottom-message p {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+ul li {
+  padding: 0.5em;
+  font-size: 13px
+}
+
+.NavleftBar {
+  justify-self: flex-start;
+}
+
+.Main-right {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  overflow: scroll;
+}
+
+.Main-right,
+.NavleftBar,
+.message {
+  max-height: 100vh;
+  overflow: scroll;
+  color: white;
+}
+
+.Main-right::-webkit-scrollbar,
+.NavleftBar::-webkit-scrollbar,
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+.Main-right,
+.NavleftBar {
+  background-color: #23272A;
+}
+
+.message {
+  background-color: #2C2F33;
 }
