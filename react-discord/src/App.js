@@ -1,12 +1,13 @@
 import "./App.css";
-import navBarLeft from "./NavBarLeft";
-import header from "./Header";
+import NavBarLeft from "./NavBarLeft";
+import Header from "./Header";
 
 function App() {
   return (
     <div className="App">
       <div>
-        <navBarLeft></navBarLeft>
+        <NavBarLeft />
+    
       </div>
       <div>
         <header></header>

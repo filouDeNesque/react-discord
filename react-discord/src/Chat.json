@@ -1,5 +1,5 @@
 [{
-    "Titre": "Taverne",
+    "name": "Taverne",
     "salon": [{
             "name": "Annonce importante",
             "type": "text"
@@ -18,7 +18,7 @@
         }
     ]
 }, {
-    "Titre": "Cours partagé",
+    "name": "Cours partagé",
     "salon": [{
             "name": "Intro SI",
             "type": "text"
@@ -37,7 +37,7 @@
         }
     ]
 }, {
-    "Titre": "worksaloon",
+    "name": "worksaloon",
     "salon": [{
             "name": "Cuisine",
             "type": "vocal"
