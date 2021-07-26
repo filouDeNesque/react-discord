@@ -1,0 +1,58 @@
+[{
+    "Titre": "Taverne",
+    "salon": [{
+            "name": "Annonce importante",
+            "type": "text"
+        },
+        {
+            "name": "General",
+            "type": "text"
+        },
+        {
+            "name": "Flood",
+            "type": "text"
+        },
+        {
+            "name": "Gené Vocal",
+            "type": "vocal"
+        }
+    ]
+}, {
+    "Titre": "Cours partagé",
+    "salon": [{
+            "name": "Intro SI",
+            "type": "text"
+        },
+        {
+            "name": "Intro git",
+            "type": "text"
+        },
+        {
+            "name": "Intro Algo",
+            "type": "text"
+        },
+        {
+            "name": "init java poo",
+            "type": "text"
+        }
+    ]
+}, {
+    "Titre": "worksaloon",
+    "salon": [{
+            "name": "Cuisine",
+            "type": "vocal"
+        },
+        {
+            "name": "Au coin du feu",
+            "type": "vocal"
+        },
+        {
+            "name": "groupe 1",
+            "type": "vocal"
+        },
+        {
+            "name": "Groupe 2",
+            "type": "vocal"
+        }
+    ]
+}]
