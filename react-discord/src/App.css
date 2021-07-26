@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -42,7 +43,6 @@
   position: relative;
   display: flex;
   align-content: center;
-  max-width: 20%;
   padding: 1em;
   justify-content: space-evenly;
 }
@@ -80,4 +80,50 @@
 
 .user-name {
   text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.body-message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+}
+
+.body-message img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+
+.main-message {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.header-message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-message h4{
+  padding-right: 1em;
+}
+
+.header-message p{
+  font-size: 12px;
+}
+
+.bottom-message {
+  text-align: left;
+}
+.bottom-message p{
+  margin: 0;
 }

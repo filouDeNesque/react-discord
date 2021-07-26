@@ -39,8 +39,10 @@ function OfflineUsers(props) {
 function NavBarRight() {
   return (
     <>
+    <div class="Main-right">
       <OnlineUsers elements={users}></OnlineUsers>
       <OfflineUsers elements={users}></OfflineUsers>
+    </div>
     </>
   );
 }
