@@ -36,13 +36,43 @@ function OfflineUsers(props) {
   );
 }
 
+function OnlineNb(props) {
+  var nb = 0;
+  props.elements.forEach((element) => (
+    element.status === "online" ? nb++ : 1
+  ));
+  return (
+    <>
+      <div class="online-user-nb">
+        <p>{"Online - " + nb}</p>
+      </div>
+    </>
+  )
+}
+
+function OfflineNb(props) {
+  var nb = 0;
+  props.elements.forEach((element) => (
+    element.status === "offline" ? nb++ : 1
+  ));
+  return (
+    <>
+      <div class="online-user-nb">
+        <p>{"Offline - " + nb}</p>
+      </div>
+    </>
+  )
+}
+
 function NavBarRight() {
   return (
     <>
-    <div class="Main-right">
-      <OnlineUsers elements={users}></OnlineUsers>
-      <OfflineUsers elements={users}></OfflineUsers>
-    </div>
+      <div class="Main-right">
+        <OnlineNb elements={users} />
+        <OnlineUsers elements={users} />
+        <OfflineNb elements={users} />
+        <OfflineUsers elements={users} />
+      </div>
     </>
   );
 }
