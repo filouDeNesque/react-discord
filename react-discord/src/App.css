@@ -219,3 +219,14 @@ ul li {
 .message-padding {
   padding-bottom: 4em;
 }
+
+.btn-float{
+  position: absolute;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  font-family: 'Lexend';
+  border-radius: 50%;
+  font-size: 14px;
+  right: 28em;
+}

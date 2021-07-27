@@ -20,6 +20,7 @@ export default function Main() {
           ))}
         </div>
         <TextField />
+        <button class="btn-float" onClick={()=>alert("test")}>Send</button>
       </div>
     </>
   );
