@@ -192,3 +192,19 @@ ul li {
   width: 100%;
   display: flex;
 }
+
+.text-area{
+    border-color: transparent;
+    position: fixed;
+    bottom: 1em;
+    width: 58%;
+    left: 17%;
+    border-radius: 8px;
+    height: 40px;
+    background: #3f4042;
+    resize: none;
+}
+
+.message-padding{
+    padding-bottom: 2em;
+}

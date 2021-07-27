@@ -2,7 +2,7 @@ import messages from "./Message.json";
 export default function Main() {
   return (
     <><div className="message">
-      <div>
+      <div class="message-padding">
         {messages.map((user) => (
           <div class="body-message">
             <img src={user.image} alt=""></img>
