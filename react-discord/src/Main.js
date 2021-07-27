@@ -1,7 +1,7 @@
 import messages from "./Message.json";
 export default function Main() {
   return (
-    <div className="message">
+    <><div className="message">
       <div>
         {messages.map((user) => (
           <div class="body-message">
@@ -18,6 +18,10 @@ export default function Main() {
           </div>
         ))}
       </div>
-    </div>
+    </div><TextField /></>
   );
+}
+
+function TextField(){
+  return <textarea class="text-area" />;
 }
