@@ -1,5 +1,14 @@
+import React, { useState } from "react";
 import messages from "./Message.json";
 export default function Main() {
+  var[value,setValue]=useState("bonjour2");
+  
+
+  function handleSubmit(e) {
+    console.log(e.target.value);
+    setValue(e.target.value);
+  }
+
   return (
     <>
       <div className="message">
@@ -19,18 +28,15 @@ export default function Main() {
             </div>
           ))}
         </div>
-        <TextField />
-        <button class="btn-float" onClick={()=>alert("test")}>Send</button>
+        <form>
+          <textarea class="text-area" value={value} onChange={handleSubmit} />
+          <button class="btn-float" type="submit" onClick={handleSubmit}>
+            Send
+          </button>
+        </form>
       </div>
     </>
   );
 }
 
-function TextField() {
-  return (
-    <>
-   
-      <textarea class="text-area" />
-    </>
-  );
-}
+
