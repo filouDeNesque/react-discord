@@ -178,5 +178,17 @@ ul li {
 }
 
 .message {
+  flex-grow: 2;
   background-color: #2C2F33;
+}
+
+.header-main-right{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-bottom{
+  width: 100%;
+  display: flex;
 }
