@@ -1,9 +1,9 @@
-import chats from "./Chat.json";
+
 
 function Subsaloon(props) {
   return (
     <>
-      {props.title.map((salon) => (
+      {props.room.map((salon) => (
         <li>{salon.name}</li>
       ))}
     </>
@@ -14,12 +14,12 @@ function Salon(props) {
   return (
     <>
       <ul>
-        {props.title.map((salon) => (
+        {props.rooms.map((salon) => (
           <li>
             {salon.name}
 
             <ul>
-              <Subsaloon title={salon.salon} />
+              <Subsaloon room={salon.salon} />
             </ul>
           </li>
         ))}
@@ -28,10 +28,10 @@ function Salon(props) {
   );
 }
 
-export default function NavBarLeft() {
+export default function NavBarLeft(props) {
   return (
     <div className="NavleftBar">
-      <Salon title={chats} />
+      <Salon rooms={props.rooms} />
     </div>
   );
 }
