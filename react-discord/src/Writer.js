@@ -12,8 +12,8 @@ export default function TextField(props) {
 
     return (
         <>
-            <textarea class="text-area" value={msg} onChange={update} />
-            <button class="btn-float" onClick={send}>
+            <textarea className="text-area" value={msg} onChange={update} />
+            <button className="btn-float" onClick={send}>
                 Send
             </button>
         </>

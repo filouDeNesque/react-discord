@@ -8,16 +8,15 @@ export default function AppUI(props) {
     var scroller = useRef();
     useEffect(() => {
         scroller.current.scrollTop = scroller.current.scrollHeight;
-        console.log(scroller.current);
     });
     return (
         <div className="App">
-            <div class="main">
+            <div className="main">
                 <NavBarLeft rooms={props.chats} />
-                <div class="header-main-right">
-                    <div class="header-bottom">
+                <div className="header-main-right">
+                    <div className="header-bottom">
                         <div className="messages" ref={scroller}>
-                            <div class="messages-padding">
+                            <div className="messages-padding">
                                 {props.messages.map(message => (
                                     <Message message={message} key={message.uid} />
                                 ))}

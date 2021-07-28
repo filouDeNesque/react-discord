@@ -1,9 +1,9 @@
 function User(props) {
   return (
-    <div class={"user " + props.user.status}>
-      <img src={props.user.photo} class="photo" alt=""></img>
-      <span class="badge"></span>
-      <p class="user-name">{props.user.name}</p>
+    <div className={"user " + props.user.status}>
+      <img src={props.user.photo} className="photo" alt=""></img>
+      <span className="badge"></span>
+      <p className="user-name">{props.user.name}</p>
     </div>
   );
 }
@@ -11,7 +11,7 @@ function User(props) {
 function StatusCount(props) {
   return (
     <>
-      <div class="online-user-nb">
+      <div className="online-user-nb">
         <p>{props.status + " - " + props.users.length}</p>
       </div>
     </>
@@ -29,7 +29,7 @@ function filterOffline(users) {
 function UsersBar(props) {
   return (
     <>
-      <div class="Main-right">
+      <div className="Main-right">
         <StatusCount status="Online" users={filterOnline(props.users)} />
         {filterOnline(props.users).map((element) => (<User user={element} key={element.uid} />))}
         <StatusCount status="Offline" users={filterOffline(props.users)} />

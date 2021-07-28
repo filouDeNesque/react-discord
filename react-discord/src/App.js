@@ -5,15 +5,15 @@ import usersJson from "./User.json";
 import chatsJson from "./Chat.json";
 import AppUI from "./AppUI";
 
-for (var i = 0; i < usersJson.length; i++)
+for (let i = 0; i < usersJson.length; i++)
   usersJson[i].uid = i + 1;
-for (var i = 0; i < chatsJson.length; i++) {
-  for (var j = 0; j < chatsJson[i].salon.length; j++) {
+for (let i = 0; i < chatsJson.length; i++) {
+  for (let j = 0; j < chatsJson[i].salon.length; j++) {
     chatsJson[i].salon[j].uid = j + 1;
   }
   chatsJson[i].uid = i + 1;
 }
-for (var i = 0; i < messagesJson.length; i++)
+for (let i = 0; i < messagesJson.length; i++)
   messagesJson[i].uid = i + 1;
 
 function App() {
