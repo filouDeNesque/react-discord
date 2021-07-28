@@ -1,13 +1,9 @@
 
 
 function Subsaloon(props) {
-  return (
-    <>
-      {props.room.map((salon) => (
-        <li>{salon.name}</li>
-      ))}
-    </>
-  );
+  return props.room.map((salon) => (
+    <li key={salon.uid}>{salon.name}</li>
+  ));
 }
 
 function Salon(props) {
@@ -15,9 +11,8 @@ function Salon(props) {
     <>
       <ul>
         {props.rooms.map((salon) => (
-          <li>
+          <li key={salon.uid}>
             {salon.name}
-
             <ul>
               <Subsaloon room={salon.salon} />
             </ul>

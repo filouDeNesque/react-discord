@@ -31,9 +31,9 @@ function UsersBar(props) {
     <>
       <div class="Main-right">
         <StatusCount status="Online" users={filterOnline(props.users)} />
-        {filterOnline(props.users).map((element) => (<User user={element} />))}
+        {filterOnline(props.users).map((element) => (<User user={element} key={element.uid} />))}
         <StatusCount status="Offline" users={filterOffline(props.users)} />
-        {filterOffline(props.users).map((element) => (<User user={element} />))}
+        {filterOffline(props.users).map((element) => (<User user={element} key={element.uid} />))}
       </div>
     </>
   );

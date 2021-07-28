@@ -151,7 +151,7 @@ ul li {
 
 .Main-right,
 .NavleftBar,
-.message {
+.messages {
   max-height: 100vh;
   overflow: scroll;
   color: white;
@@ -159,7 +159,7 @@ ul li {
 
 .Main-right::-webkit-scrollbar,
 .NavleftBar::-webkit-scrollbar,
-.message::-webkit-scrollbar {
+.messages::-webkit-scrollbar {
   display: none;
 }
 
@@ -168,7 +168,7 @@ ul li {
   background-color: #23272a;
 }
 
-.message {
+.messages {
   flex-grow: 2;
   background-color: #2c2f33;
 }
@@ -203,7 +203,7 @@ ul li {
   outline: -webkit-focus-ring-color none 0px;
 }
 
-.message-padding {
+.messages-padding {
   padding-bottom: 4em;
 }
 

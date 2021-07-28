@@ -1,15 +1,25 @@
 import { useState } from "react";
 import "./App.css";
-import NavBarLeft from "./NavBarLeft";
-import UsersBar from "./UsersBar";
-import Message from "./Message";
-import Writer from "./Writer";
 import messagesJson from "./Message.json";
-import users from "./User.json";
-import chats from "./Chat.json";
+import usersJson from "./User.json";
+import chatsJson from "./Chat.json";
+import AppUI from "./AppUI";
+
+for (var i = 0; i < usersJson.length; i++)
+  usersJson[i].uid = i + 1;
+for (var i = 0; i < chatsJson.length; i++) {
+  for (var j = 0; j < chatsJson[i].salon.length; j++) {
+    chatsJson[i].salon[j].uid = j + 1;
+  }
+  chatsJson[i].uid = i + 1;
+}
+for (var i = 0; i < messagesJson.length; i++)
+  messagesJson[i].uid = i + 1;
 
 function App() {
   var [messages, setMessages] = useState(messagesJson);
+  var [users] = useState(usersJson);
+  var [chats] = useState(chatsJson);
   function addMessage(message) {
     setMessages(messages.concat([{
       utilisateur: "Nicolas",
@@ -19,27 +29,7 @@ function App() {
         "https://cdn.pixabay.com/photo/2015/03/03/08/55/portrait-657116__340.jpg",
     }]));
   }
-  return (
-    <div className="App">
-      <div class="main">
-        <NavBarLeft rooms={chats} />
-        <div class="header-main-right">
-          <div class="top-header"></div>
-          <div class="header-bottom">
-            <div className="message">
-              <div class="message-padding">
-                {messages.map((user) => (
-                  <Message user={user} />
-                ))}
-              </div>
-              <Writer add={addMessage} />
-            </div>
-            <UsersBar users={users} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <AppUI chats={chats} messages={messages} users={users} addMessage={addMessage} />
 }
 
 export default App;

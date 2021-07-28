@@ -6,7 +6,8 @@ export default function TextField(props) {
     }
 
     function send() {
-        return props.add(msg);
+        props.add(msg);
+        setMsg("");
     }
 
     return (
